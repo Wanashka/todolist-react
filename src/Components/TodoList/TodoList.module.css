@@ -1,0 +1,25 @@
+.todoTask {
+  display: flex;
+}
+.TabQueue,
+.TabDone,
+.TabDevelopment {
+  width: 33%;
+  margin: 10px 5px;
+}
+.Queue,
+.Done,
+.Development {
+  text-align: center;
+  padding: 5px;
+  border: solid red 2px;
+  border-radius: 15px;
+}
+.todoTask div span {
+  display: block;
+  border: solid 1px rgb(255, 13, 13);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 5px;
+  word-break: break-all;
+}

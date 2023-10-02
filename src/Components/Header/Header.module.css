@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+.blockLogo {
+  flex-grow: 1;
+  text-align: center; /* Центрируем текст по горизонтали */
+  margin-left: 100px; /* Добавляем отступ справа на 30 пикселей */
+}
+.headerLogo {
+  font-size: 28px;
+}
+.buttonNewTask {
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 16px;
+  color: #fff; /* Белый текст */
+  background-color: #000; /* Черный фон */
+  border: 2px solid #ff0000; /* Красная рамка */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.buttonNewTask:hover {
+  background-color: #ff0000; /* Красный фон при наведении курсора */
+  border-color: #ff0000; /* Красная рамка при наведении курсора */
+}
