@@ -7,6 +7,7 @@
 .TabDevelopment {
     width: 33%;
     margin: 10px 5px;
+    height: 400px; /*Это длина доски*/
 }
 
 .Queue,
@@ -18,11 +19,30 @@
     border-radius: 15px;
 }
 
-.item {
-    display: block;
+.containerTask {
+    display: flex;
+    width: 90%;
     border: solid 1px rgb(255, 13, 13);
+    margin: 10px auto;
     border-radius: 15px;
-    margin: 10px;
     padding: 5px;
-    word-break: break-all;
 }
+
+.item {
+    word-break: break-all;
+    width: 95%;
+}
+
+.statusCompletionTask {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: auto 2px;
+
+}
+
+.hovered {
+    boxShadow: 0 4px 3px gray;
+    margin-bottom: 20px;
+}
+

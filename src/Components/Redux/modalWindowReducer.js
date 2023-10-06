@@ -14,11 +14,6 @@ const modalWindowReducer = (state = initialState, action) => {
         ...state,
         isOpenModal: false,
       };
-    case 'REMOVE_TODO':
-      return {
-        ...state,
-        todos: state.todos.filter((todo, index) => index !== action.payload),
-      };
     default:
       return state;
   }
