@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './TodoList.module.css';
 import {ModalViewTask} from '../Modal/ModalViewTask/ModalViewTask';
 import ModalCreateTaskContainer from '../Modal/ModalCreateTask/ModalCreateTaskContainer';
@@ -73,8 +73,8 @@ export const TodoList = (props) => {
     props.openModalCreateTask();
   }
 
-  let statusTab = (tab) =>
-    props.task
+  let statusTab = (tab) => {
+    return props.task
       .filter((item) => item.tab === tab)
       .filter((item) => item.title.toLowerCase().includes(props.searchWord.toLowerCase()))
       .map((task) => {
@@ -93,12 +93,12 @@ export const TodoList = (props) => {
             <span className={styles.titleTask} id={task.id}>
             {task.title}
             </span>
-            <div className={styles.blockBtn}></div>
             <span className={styles.basket} onClick={() => openWindowEditTask(task.id)}>&#9998;</span>
             <span className={styles.basket} onClick={() => removeTask(task.id)}>&#128465;</span>
           </div>
         );
       });
+  }
 
   return (
     <div className={styles.todoTask}>
