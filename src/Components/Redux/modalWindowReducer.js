@@ -1,5 +1,6 @@
 const initialState = {
   isOpenModal: false, //false
+  modeEdit: false,
 };
 
 const modalWindowReducer = (state = initialState, action) => {
@@ -14,6 +15,12 @@ const modalWindowReducer = (state = initialState, action) => {
         ...state,
         isOpenModal: false,
       };
+    case 'MODE_EDIT':
+      return {
+        ...state,
+        modeEdit: action.mode,
+      };
+
     default:
       return state;
   }
@@ -31,3 +38,9 @@ export const closeModalCreateTask = () => {
     type: 'CLOSE_MODAL_CREATE_TASK',
   };
 };
+export const modeEdit = (mode) => {
+  return {
+    type: "MODE_EDIT", mode,
+  }
+}
+

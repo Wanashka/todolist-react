@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,11 +13,11 @@
 .modal {
     position: relative;
     border: solid red 2px;
-    color: #fff; /* Белый текст */
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень */
-    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 370px;
     width: 100%;
     text-align: center;
 }
@@ -30,4 +30,56 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    text-align: start;
+    margin: 0 auto;
+}
+
+.windowName {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.btnEdit {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.timeFrame {
+    font-size: 12px;
+    float: left;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: solid 1px white;
+    font-weight: 300;
+}
+
+.priority {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 300;
+
+}
+
+.title {
+    width: 100%;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.description {
+    margin-left: 15px;
+    width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+    .timeFrame {
+        border: none;
+        float: none;
+    }
 }

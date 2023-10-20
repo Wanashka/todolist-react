@@ -1,7 +1,8 @@
-import { Header } from './Header';
-import { connect } from 'react-redux';
-import { openModalCreateTask } from '../Redux/modalWindowReducer';
+import {Header} from './Header';
+import {connect} from 'react-redux';
+import {openModalCreateTask} from '../Redux/modalWindowReducer';
+import {searchTodoReducer} from '../Redux/todoReducer';
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = () => ({});
 
-export default connect(mapStateToProps, { openModalCreateTask })(Header);
+export default connect(mapStateToProps, {openModalCreateTask, searchTodoReducer})(Header);

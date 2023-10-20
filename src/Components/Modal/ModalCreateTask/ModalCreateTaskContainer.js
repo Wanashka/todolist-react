@@ -1,10 +1,16 @@
-import { connect } from 'react-redux';
-import { ModalCreateTask } from './ModalCreateTask';
-import { closeModalCreateTask } from '../../Redux/modalWindowReducer';
-import { addTodoReducer } from '../../Redux/todoReducer';
+import {connect} from 'react-redux';
+import {ModalCreateTask} from './ModalCreateTask';
+import {closeModalCreateTask, modeEdit} from '../../Redux/modalWindowReducer';
+import {addTodoReducer, editTodoReducer} from '../../Redux/todoReducer';
 
 const mapStateToProps = (state) => ({
   isOpen: state.modalCreateTask.isOpenModal,
+  ifModeEdit: state.modalCreateTask.modeEdit,
 });
 
-export default connect(mapStateToProps, { closeModalCreateTask, addTodoReducer })(ModalCreateTask);
+export default connect(mapStateToProps, {
+  closeModalCreateTask,
+  addTodoReducer,
+  editTodoReducer,
+  modeEdit
+})(ModalCreateTask);

@@ -1,4 +1,5 @@
 .todoTask {
+    width: 100%;
     display: flex;
 }
 
@@ -6,8 +7,8 @@
 .TabDone,
 .TabDevelopment {
     width: 33%;
-    margin: 10px 5px;
-    height: 400px; /*Это длина доски*/
+    margin: 10px 3px;
+    padding-bottom: 60px;
 }
 
 .Queue,
@@ -26,11 +27,27 @@
     margin: 10px auto;
     border-radius: 15px;
     padding: 5px;
+    cursor: grab;
 }
 
-.item {
-    word-break: break-all;
-    width: 95%;
+.titleTask {
+    width: 75%;
+    word-break: break-word;
+    margin: auto 0 auto 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.blockBtn {
+    margin-left: auto;
+}
+
+.basket {
+    width: 25px;
+    font-size: 20px;
+    margin: auto 0;
+    text-align: center;
+    cursor: pointer;
 }
 
 .statusCompletionTask {
@@ -38,11 +55,11 @@
     height: 12px;
     border-radius: 50%;
     margin: auto 2px;
-
 }
 
-.hovered {
-    boxShadow: 0 4px 3px gray;
-    margin-bottom: 20px;
+@media screen and (max-width: 520px) {
+    .containerTask {
+        width: 100%;
+    }
 }
 

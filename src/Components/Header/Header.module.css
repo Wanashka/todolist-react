@@ -1,27 +1,76 @@
 .header {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
 }
-.blockLogo {
-  flex-grow: 1;
-  text-align: center; /* Центрируем текст по горизонтали */
-  margin-left: 100px; /* Добавляем отступ справа на 30 пикселей */
-}
+
 .headerLogo {
-  font-size: 28px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    max-width: 100%;
 }
+
+.searchBox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 32px;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.searchBox:hover > .searchTxt,
+.searchTxt:focus {
+    width: 200px;
+}
+
+.searchBtn {
+    text-align: left;
+    border-radius: 15%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    background-color: red;
+}
+
+.searchTxt {
+    width: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.blockButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
 .buttonNewTask {
-  padding: 5px 10px;
-  margin: 10px;
-  font-size: 16px;
-  color: #fff; /* Белый текст */
-  background-color: #000; /* Черный фон */
-  border: 2px solid #ff0000; /* Красная рамка */
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+    height: 32px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
+
 .buttonNewTask:hover {
-  background-color: #ff0000; /* Красный фон при наведении курсора */
-  border-color: #ff0000; /* Красная рамка при наведении курсора */
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
